@@ -1,3 +1,6 @@
+[![mops](https://oknww-riaaa-aaaam-qaf6a-cai.raw.ic0.app/badge/mops/bench)](https://mops.one/bench)
+[![documentation](https://oknww-riaaa-aaaam-qaf6a-cai.raw.ic0.app/badge/documentation/bench)](https://mops.one/bench/docs)
+
 # Motoko Benchmarking
 
 Easy way to benchmark the Motoko code with `mops bench`.

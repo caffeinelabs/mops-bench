@@ -2,7 +2,7 @@
 name = "bench"
 version = "1.0.0"
 description = "Motoko benchmarking with Mops"
-repository = "https://github.com/dfinity/mops-bench"
+repository = "https://github.com/caffeinelabs/mops-bench"
 keywords = [ "bench", "benchmark", "performance", "profiling", "mops" ]
 license = "MIT"
 
@@ -14,5 +14,4 @@ moc = "1.0.0"
 wasmtime = "40.0.0"
 
 [dev-dependencies]
-vector = "0.2.0"
-base = "0.16.0"
+bench = "1.0.0"

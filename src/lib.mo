@@ -38,32 +38,32 @@ module {
 	};
 
 	public class Bench() {
-		var _name = "";
-		var _description = "";
-		var _rows : [Text] = [];
-		var _cols : [Text] = [];
-		var _runner = func(row : Text, col : Text) {};
+		var name_ = "";
+		var description_ = "";
+		var rows_ : [Text] = [];
+		var cols_ : [Text] = [];
+		var runner_ = func(_row : Text, _col : Text) {};
 
 		// public let heap : BenchHeap = BenchHeap();
 
 		public func name(value : Text) {
-			_name := value;
+			name_ := value;
 		};
 
 		public func description(value : Text) {
-			_description := value;
+			description_ := value;
 		};
 
 		public func rows(value : [Text]) {
-			_rows := value;
+			rows_ := value;
 		};
 
 		public func cols(value : [Text]) {
-			_cols := value;
+			cols_ := value;
 		};
 
 		public func runner(fn : (row : Text, col : Text) -> ()) {
-			_runner := fn;
+			runner_ := fn;
 		};
 
 		// INTERNAL
@@ -73,17 +73,17 @@ module {
 
 		public func getSchema() : BenchSchema {
 			{
-				name = _name;
-				description = _description;
-				rows = _rows;
-				cols = _cols;
+				name = name_;
+				description = description_;
+				rows = rows_;
+				cols = cols_;
 			}
 		};
 
 		public func runCell(rowIndex : Nat, colIndex : Nat) {
-			let row = _rows.get(rowIndex);
-			let col = _cols.get(colIndex);
-			_runner(row, col);
+			let row = rows_.get(rowIndex);
+			let col = cols_.get(colIndex);
+			runner_(row, col);
 		};
 	};
 };

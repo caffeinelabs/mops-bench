@@ -12,6 +12,3 @@ core = "2.0.0"
 [toolchain]
 moc = "1.0.0"
 wasmtime = "40.0.0"
-
-[dev-dependencies]
-bench = "1.0.0"

@@ -1,5 +1,4 @@
-import Nat "mo:base/Nat";
-import Iter "mo:base/Iter";
+import Nat "mo:core/Nat";
 import Buffer "mo:base/Buffer";
 import Vector "mo:vector/Class";
 import Bench "../src";
@@ -20,14 +19,14 @@ module {
 			// Vector
 			if (row == "Vector") {
 				let vec = Vector.Vector<Nat>();
-				for (i in Iter.range(1, n)) {
+				for (i in Nat.range(1, n+1)) {
 					vec.add(i);
 				};
 			}
 			// Buffer
 			else if (row == "Buffer") {
 				let buf = Buffer.Buffer<Nat>(0);
-				for (i in Iter.range(1, n)) {
+				for (i in Nat.range(1, n+1)) {
 					buf.add(i);
 				};
 			};

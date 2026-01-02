@@ -8,7 +8,6 @@ license = "MIT"
 
 [dependencies]
 core = "2.0.0"
-base = "0.16.0"
 
 [toolchain]
 moc = "1.0.0"

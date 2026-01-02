@@ -1,34 +1,36 @@
+import List "mo:core/List";
 import Nat "mo:core/Nat";
+import PureList "mo:core/pure/List";
 import Runtime "mo:core/Runtime";
-import Buffer "mo:base/Buffer";
-import Vector "mo:vector/Class";
 import Bench "../src";
 
 let bench = Bench.Bench();
 
-bench.name("Vector vs Buffer");
+bench.name("List vs PureList");
 bench.description("Add items one-by-one");
 
-bench.rows(["Vector", "Buffer"]);
+bench.rows(["List", "PureList"]);
 bench.cols(["10", "10000", "1000000"]);
 
-bench.runner(func(row, col) {
-	let ?n = Nat.fromText(col) else Runtime.trap("Invalid column value: " # col);
+bench.runner(
+	func(row, col) {
+		let ?n = Nat.fromText(col) else Runtime.trap("Invalid column value: " # col);
 
-	// Vector
-	if (row == "Vector") {
-		let vec = Vector.Vector<Nat>();
-		for (i in Nat.range(1, n+1)) {
-			vec.add(i);
+		// Vector
+		if (row == "List") {
+			let list = List.empty<Nat>();
+			for (i in Nat.range(1, n + 1)) {
+				list.add(i);
+			};
+		}
+		// Buffer
+		else if (row == "PureList") {
+			var list = PureList.empty<Nat>();
+			for (i in Nat.range(1, n + 1)) {
+				list := list.pushFront(i);
+			};
 		};
 	}
-	// Buffer
-	else if (row == "Buffer") {
-		let buf = Buffer.Buffer<Nat>(0);
-		for (i in Nat.range(1, n+1)) {
-			buf.add(i);
-		};
-	};
-});
+);
 
 bench.runCell(0, 0);

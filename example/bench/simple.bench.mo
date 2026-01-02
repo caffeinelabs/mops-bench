@@ -2,13 +2,13 @@ import List "mo:core/List";
 import Nat "mo:core/Nat";
 import PureList "mo:core/pure/List";
 import Runtime "mo:core/Runtime";
-import Bench "../src";
+import Bench "mo:bench";
 
 module {
 	public func init() : Bench.Bench {
 		let bench = Bench.Bench();
 
-		bench.name("List vs PureList");
+		bench.name("List vss PureList");
 		bench.description("Add items one-by-one");
 
 		bench.rows(["List", "PureList"]);

@@ -20,3 +20,7 @@ jobs:
 
       - name: Run mops test
         run: mops test
+
+      - name: Run example
+        working-directory: ./example
+        run: mops bench

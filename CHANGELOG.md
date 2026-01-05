@@ -1,6 +1,6 @@
 # Mops-bench changelog
 
-## Next
+## 2.0.0
 
 * Migrate from base to core 2.0.0
 

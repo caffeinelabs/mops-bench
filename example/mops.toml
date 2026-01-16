@@ -3,7 +3,7 @@ core = "2.0.0"
 
 [dev-dependencies]
 base = "0.16.0"
-bench = "https://github.com/research-ag/mops-bench#maintenance"
+bench = "2.0.0"
 
 [toolchain]
 moc = "1.0.0"

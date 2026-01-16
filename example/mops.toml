@@ -2,6 +2,7 @@
 core = "2.0.0"
 
 [dev-dependencies]
+base = "0.16.0"
 bench = "2.0.0"
 
 [toolchain]

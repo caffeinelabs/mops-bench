@@ -1,12 +1,12 @@
 [package]
 name = "bench"
-version = "2.0.0"
+version = "2.0.1"
 description = "Motoko benchmarking with Mops"
 repository = "https://github.com/caffeinelabs/mops-bench"
 keywords = [ "bench", "benchmark", "performance", "profiling", "mops" ]
 license = "MIT"
 
-[dev-dependencies]
+[dependencies]
 core = "2.0.0"
 
 [toolchain]
